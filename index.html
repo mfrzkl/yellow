@@ -25,6 +25,7 @@
             font-size: 15px; /* Ukuran font lebih besar */
             font-weight: 300;
             letter-spacing: 0.3px;
+            padding-bottom: 50px; /* Ruang untuk navbar di bawah */
         }
 
         .logo {
@@ -99,15 +100,19 @@
             margin: 8px 0;
         }
 
-        footer {
+        .sticky-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border-top: 1px solid #eee;
             padding: 15px 0;
+            text-align: center;
             font-size: 0.85em;
             color: #666;
-            text-align: left;
-            border-top: 1px solid #eee;
-            margin-top: 40px;
-            width: 100%;
-            box-sizing: border-box;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
         }
 
         .header {
@@ -234,7 +239,9 @@
         </div>
     </div>
 
-    <footer>© 2024 mfrzkl</footer>
+    <div class="sticky-nav">
+        © 2024 mfrzkl
+    </div>
 
     <script>
         let isTransitioning = false;
