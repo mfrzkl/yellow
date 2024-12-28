@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mfrzkl</title>
+    <style>
+        .content {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+            position: absolute;
+            width: 100%;
+            max-width: 600px;
+        }
+        .content.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .content-wrapper {
+            position: relative;
+            min-height: 500px;
+        }
+        button {
+            background: none;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: monospace;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background: #f0f0f0;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom-color 0.3s ease;
+        }
+        a:hover {
+            border-bottom-color: #000;
+        }
+    </style>
+</head>
+<body style="font-family: monospace; max-width: 600px; margin: 40px auto; padding: 20px; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;">
+    <div style="flex-grow: 1;">
+        <div style="margin-bottom: 20px;">
+            <button onclick="setLanguage('en')" style="margin-right: 10px;">English</button>
+            <button onclick="setLanguage('id')" style="margin-right: 10px;">Indonesia</button>
+            <button onclick="setLanguage('jp')">日本語</button>
+        </div>
+
+        <div class="content-wrapper">
+            <div id="content-en" class="content active">
+                <h1>mfrzkl</h1>
+                <p>hi, i'm miftah rizky aulia.</p>
+                <p>i build things and teach code.</p>
+
+                <h2>about</h2>
+                <p>currently studying informatics @ upn veteran jakarta with 3.87 gpa.</p>
+                <p>passionate about full-stack development and continuous learning.</p>
+                <p>based in jakarta, indonesia.</p>
+
+                <h2>links</h2>
+                <ul>
+                    <li><a href="https://miftahrizkyaulia.vercel.app/">website</a></li>
+                    <li><a href="https://github.com/mfrzkl">github</a></li>
+                    <li><a href="https://www.linkedin.com/in/ifrzky/">linkedin</a></li>
+                    <li><a href="mailto:miftahrizkyaulia@gmail.com">email</a></li>
+                </ul>
+            </div>
+
+            <div id="content-id" class="content">
+                <h1>mfrzkl</h1>
+                <p>hai, saya miftah rizky aulia.</p>
+                <p>saya membangun sesuatu dan mengajar koding.</p>
+
+                <h2>tentang</h2>
+                <p>saat ini kuliah informatika @ upn veteran jakarta dengan ipk 3.87.</p>
+                <p>passionate dalam pengembangan full-stack dan pembelajaran berkelanjutan.</p>
+                <p>berbasis di jakarta, indonesia.</p>
+
+                <h2>tautan</h2>
+                <ul>
+                    <li><a href="https://miftahrizkyaulia.vercel.app/">website</a></li>
+                    <li><a href="https://github.com/mfrzkl">github</a></li>
+                    <li><a href="https://www.linkedin.com/in/ifrzky/">linkedin</a></li>
+                    <li><a href="mailto:miftahrizkyaulia@gmail.com">email</a></li>
+                </ul>
+            </div>
+
+            <div id="content-jp" class="content">
+                <h1>mfrzkl</h1>
+                <p>こんにちは、ミフタ・リズキー・アウリアです。</p>
+                <p>物を作り、コードを教えています。</p>
+
+                <h2>について</h2>
+                <p>現在、UPNベテランジャカルタで情報工学を学んでいます（GPA：3.87）。</p>
+                <p>フルスタック開発と継続的な学習に情熱を持っています。</p>
+                <p>インドネシア、ジャカルタを拠点としています。</p>
+
+                <h2>リンク</h2>
+                <ul>
+                    <li><a href="https://miftahrizkyaulia.vercel.app/">ウェブサイト</a></li>
+                    <li><a href="https://github.com/mfrzkl">github</a></li>
+                    <li><a href="https://www.linkedin.com/in/ifrzky/">linkedin</a></li>
+                    <li><a href="mailto:miftahrizkyaulia@gmail.com">メール</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+        <nav style="margin-bottom: 10px;">
+            <a href="#" style="margin-right: 15px;">home</a>
+            <a href="#about" style="margin-right: 15px;">about</a>
+            <a href="#links">links</a>
+        </nav>
+        <p style="font-size: 0.9em; color: #666;">© 2024 mfrzkl</p>
+    </footer>
+
+    <script>
+        let isTransitioning = false;
+
+        function setLanguage(lang) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+
+            const currentActive = document.querySelector('.content.active');
+            const nextContent = document.getElementById('content-' + lang);
+
+            if (currentActive === nextContent) {
+                isTransitioning = false;
+                return;
+            }
+
+            // Start fade out
+            currentActive.classList.remove('active');
+
+            // Wait for fade out to complete
+            setTimeout(() => {
+                // Start fade in
+                nextContent.classList.add('active');
+                
+                // Reset transitioning flag after animation completes
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 800);
+            }, 800);
+        }
+    </script>
+</body>
+</html>
