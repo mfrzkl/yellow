@@ -13,14 +13,7 @@
             src: url('https://cdnjs.cloudflare.com/ajax/libs/spectrum-css/1.8.0/fonts/SpaceMono-Regular.ttf');
         }
         
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-        
         body {
-            min-height: 100vh;
             font-family: 'Space Mono', monospace;
             max-width: 600px;
             margin: 40px auto;
@@ -32,16 +25,6 @@
             font-size: 14px;
             font-weight: 300;
             letter-spacing: 0.2px;
-        }
-
-        .main-container {
-            max-width: 600px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 40px 20px;
-            flex: 1 0 auto;
-            display: flex;
-            flex-direction: column;
         }
 
         .logo {
@@ -66,7 +49,6 @@
         .content-wrapper {
             position: relative;
             min-height: 400px;
-            flex-grow: 1;
         }
 
         button {
@@ -79,10 +61,10 @@
             min-width: 80px;
             font-size: 13px;
             letter-spacing: 0.5px;
+            position: absolute;
             right: 0;
             top: -10px;
             border-radius: 4px;
-            position: absolute;
         }
 
         button:hover {
@@ -118,16 +100,14 @@
         }
 
         footer {
-            flex-shrink: 0;
-            padding: 15px 20px;
+            padding: 15px 0;
             font-size: 0.85em;
             color: #666;
             text-align: left;
             border-top: 1px solid #eee;
+            margin-top: 40px;
             width: 100%;
             box-sizing: border-box;
-            max-width: 600px;
-            margin: 0 auto;
         }
 
         .header {
@@ -215,12 +195,12 @@
         </svg>
         <button onclick="toggleLanguage()" id="langButton">English</button>
     </div>
-     <div class="main-container>
+
     <div class="content-wrapper">
         <div id="content-en" class="content active">
             <p>Miftah Rizky Aulia</p>
             <p><b>mfrzkl</b> is a software engineer actively involved in various independent and collaborative projects. Some of these include <em><a href="https://tilljannah.vercel.app/">Till Jannah</a></em>, where mfrzkl served as a front-end developer using the MERN stack, and <em><a href="https://github.com/mfrzkl/Aluglass">Aluglass</a></em>, developed with the PERN stack.</p>
-            <p><b>mfrzkl</b> has worked on independent projects such as <em><a href="https://github.com/mfrzkl/pangoline-engine">Pangoline Engine</a></em>, a game engine built with Java, and a <em><a href="https://github.com/mfrzkl/self-service-payment">self-service payment machine</a></em> that can be integrated into various types of stores.</p>
+            <p>In addition to collaborative projects, <b>mfrzkl</b> has worked on independent projects such as <em><a href="https://github.com/mfrzkl/pangoline-engine">Pangoline Engine</a></em>, a game engine built with Java, and a <em><a href="https://github.com/mfrzkl/self-service-payment">self-service payment machine</a></em> that can be integrated into various types of stores.</p>
             <p>With a passion for creating innovative tech solutions, <b>mfrzkl</b> is open to freelance opportunities, collaborations, and commissioned projects.</p>
             <ul>
                 <li><a href="https://github.com/mfrzkl">github</a></li>
@@ -232,7 +212,7 @@
         <div id="content-id" class="content">
             <p>Miftah Rizky Aulia</p>
             <p><b>mfrzkl</b> adalah seorang software engineer yang aktif terlibat dalam berbagai proyek mandiri dan kolaboratif. Beberapa di antaranya termasuk <em><a href="https://tilljannah.vercel.app/">Till Jannah</a></em>, di mana mfrzkl berperan sebagai front-end developer menggunakan MERN stack, dan <em><a href="https://github.com/mfrzkl/Aluglass">Aluglass</a></em>, yang dikembangkan dengan PERN stack.</p>
-            <p><b>mfrzkl</b> telah mengerjakan proyek mandiri seperti <em><a href="https://github.com/mfrzkl/pangoline-engine">Pangoline Engine</a></em>, sebuah game engine yang dibangun dengan Java, dan <em><a href="https://github.com/mfrzkl/self-service-payment">mesin pembayaran self-service</a></em> yang dapat diintegrasikan ke berbagai jenis toko.</p>
+            <p>Selain proyek kolaboratif, <b>mfrzkl</b> telah mengerjakan proyek mandiri seperti <em><a href="https://github.com/mfrzkl/pangoline-engine">Pangoline Engine</a></em>, sebuah game engine yang dibangun dengan Java, dan <em><a href="https://github.com/mfrzkl/self-service-payment">mesin pembayaran self-service</a></em> yang dapat diintegrasikan ke berbagai jenis toko.</p>
             <p>Dengan passion dalam menciptakan solusi teknologi yang inovatif, <b>mfrzkl</b> terbuka untuk kesempatan freelance, kolaborasi, dan proyek yang ditugaskan.</p>
             <ul>
                 <li><a href="https://github.com/mfrzkl">github</a></li>
@@ -244,7 +224,7 @@
         <div id="content-jp" class="content">
             <p>Miftah Rizky Aulia (ミフタ・リズキ・アウリア)</p>
             <p><b>mfrzkl</b> はさまざまな独立およびコラボレーティブプロジェクトに積極的に参加しているソフトウェアエンジニアです。これらには、MERNスタックを使用してフロントエンド開発者として務めた<em><a href="https://tilljannah.vercel.app/">Till Jannah</a></em>や、PERNスタックで開発された<em><a href="https://github.com/mfrzkl/Aluglass">Aluglass</a></em>などがあります。</p>
-            <p><b>mfrzkl</b> はJavaで構築されたゲームエンジン<em><a href="https://github.com/mfrzkl/pangoline-engine">Pangoline Engine</a></em>や、さまざまな店舗に統合可能な<em><a href="https://github.com/mfrzkl/self-service-payment">セルフサービス決済機</a></em>など、独自のプロジェクトにも取り組んできました。</p>
+            <p>コラボレーティブプロジェクトに加えて、<b>mfrzkl</b> はJavaで構築されたゲームエンジン<em><a href="https://github.com/mfrzkl/pangoline-engine">Pangoline Engine</a></em>や、さまざまな店舗に統合可能な<em><a href="https://github.com/mfrzkl/self-service-payment">セルフサービス決済機</a></em>など、独自のプロジェクトにも取り組んできました。</p>
             <p>革新的な技術ソリューションの創造に情熱を持ち、フリーランスの機会、コラボレーション、委託プロジェクトを歓迎しています。</p>
             <ul>
                 <li><a href="https://github.com/mfrzkl">github</a></li>
@@ -252,7 +232,6 @@
                 <li><a href="mailto:miftahrizkyaulia@gmail.com">email</a></li>
             </ul>
         </div>
-    </div>
     </div>
 
     <footer>© 2024 mfrzkl</footer>
