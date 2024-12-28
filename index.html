@@ -8,7 +8,7 @@
         .content {
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.8s ease, visibility 0.8s ease;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
             position: absolute;
             width: 100%;
             max-width: 600px;
@@ -28,6 +28,7 @@
             cursor: pointer;
             font-family: monospace;
             transition: all 0.3s ease;
+            min-width: 80px;
         }
         button:hover {
             background: #f0f0f0;
@@ -41,23 +42,36 @@
         a:hover {
             border-bottom-color: #000;
         }
+        p {
+            margin: 8px 0;
+        }
+        h2 {
+            margin: 12px 0 8px 0;
+        }
+        footer {
+            position: sticky;
+            bottom: 0;
+            background: white;
+            padding: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
-<body style="font-family: monospace; max-width: 600px; margin: 40px auto; padding: 20px; line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column;">
+<body style="font-family: monospace; max-width: 600px; margin: 40px auto; padding: 20px; line-height: 1.4; min-height: 100vh; display: flex; flex-direction: column;">
     <div style="flex-grow: 1;">
         <div style="margin-bottom: 20px;">
-            <button onclick="setLanguage('en')" style="margin-right: 10px;">English</button>
-            <button onclick="setLanguage('id')" style="margin-right: 10px;">Indonesia</button>
-            <button onclick="setLanguage('jp')">日本語</button>
+            <button onclick="toggleLanguage()" id="langButton">English</button>
         </div>
 
         <div class="content-wrapper">
             <div id="content-en" class="content active">
-                <p>currently studying informatics @ upn veteran jakarta with 3.87 gpa.</p>
-                <p>passionate about full-stack development and continuous learning.</p>
-                <p>based in jakarta, indonesia.</p>
+                <p><b>mfrzkl</b> is a software engineer actively involved in various independent and collaborative projects. Some of these include <em>Till Jannah</em>, where mfrzkl served as a front-end developer using the MERN stack, and <em>Aluglass</em>, developed with the PERN stack.</p>
+                <p>In addition to collaborative projects, <b>mfrzkl</b> has worked on independent projects such as <em>Pangoline Engine</em>, a game engine built with Java, and a self-service payment machine that can be integrated into various types of stores.</p>
+                <p>With a passion for creating innovative tech solutions, <b>mfrzkl</b> is open to freelance opportunities, collaborations, and commissioned projects.</p>
 
-                <h2>links</h2>
                 <ul>
                     <li><a href="https://miftahrizkyaulia.vercel.app/">website</a></li>
                     <li><a href="https://github.com/mfrzkl">github</a></li>
@@ -67,15 +81,9 @@
             </div>
 
             <div id="content-id" class="content">
-                <p>
-                mfrzkl is a software engineer actively involved in various independent and collaborative projects. Some of these include <em>Till Jannah</em>, where mfrzkl served as a front-end developer using the MERN stack, and <em>Aluglass</em>, developed with the PERN stack.
-                </p>
-                <p>
-                    In addition to collaborative projects, mfrzkl has worked on independent projects such as <em>Pangoline Engine</em>, a game engine built with Java, and a self-service payment machine that can be integrated into various types of stores.
-                </p>
-                <p>
-                    With a passion for creating innovative tech solutions, mfrzkl is open to freelance opportunities, collaborations, and commissioned projects.
-                </p>
+                <p><b>mfrzkl</b> adalah seorang software engineer yang aktif terlibat dalam berbagai proyek mandiri dan kolaboratif. Beberapa di antaranya termasuk <em>Till Jannah</em>, di mana mfrzkl berperan sebagai front-end developer menggunakan MERN stack, dan <em>Aluglass</em>, yang dikembangkan dengan PERN stack.</p>
+                <p>Selain proyek kolaboratif, <b>mfrzkl</b> telah mengerjakan proyek mandiri seperti <em>Pangoline Engine</em>, sebuah game engine yang dibangun dengan Java, dan mesin pembayaran self-service yang dapat diintegrasikan ke berbagai jenis toko.</p>
+                <p>Dengan passion dalam menciptakan solusi teknologi yang inovatif, <b>mfrzkl</b> terbuka untuk kesempatan freelance, kolaborasi, dan proyek yang ditugaskan.</p>
 
                 <ul>
                     <li><a href="https://miftahrizkyaulia.vercel.app/">website</a></li>
@@ -86,16 +94,10 @@
             </div>
 
             <div id="content-jp" class="content">
-                <h1>mfrzkl</h1>
-                <p>こんにちは、ミフタ・リズキー・アウリアです。</p>
-                <p>物を作り、コードを教えています。</p>
+                <p><b>mfrzkl</b> はさまざまな独立およびコラボレーティブプロジェクトに積極的に参加しているソフトウェアエンジニアです。これらには、MERNスタックを使用してフロントエンド開発者として務めた<em>Till Jannah</em>や、PERNスタックで開発された<em>Aluglass</em>などがあります。</p>
+                <p>コラボレーティブプロジェクトに加えて、mfrzkl はJavaで構築されたゲームエンジン<em>Pangoline Engine</em>や、さまざまな店舗に統合可能なセルフサービス決済機など、独自のプロジェクトにも取り組んできました。</p>
+                <p>革新的な技術ソリューションの創造に情熱を持ち、フリーランスの機会、コラボレーション、委託プロジェクトを歓迎しています。</p>
 
-                <h2>について</h2>
-                <p>現在、UPNベテランジャカルタで情報工学を学んでいます（GPA：3.87）。</p>
-                <p>フルスタック開発と継続的な学習に情熱を持っています。</p>
-                <p>インドネシア、ジャカルタを拠点としています。</p>
-
-                <h2>リンク</h2>
                 <ul>
                     <li><a href="https://miftahrizkyaulia.vercel.app/">ウェブサイト</a></li>
                     <li><a href="https://github.com/mfrzkl">github</a></li>
@@ -106,20 +108,32 @@
         </div>
     </div>
 
-    <footer style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
-        <nav style="margin-bottom: 10px;">
-            <a href="#" style="margin-right: 15px;">home</a>
-            <a href="#about" style="margin-right: 15px;">about</a>
-            <a href="#links">links</a>
-        </nav>
-        <p style="font-size: 0.9em; color: #666;">© 2024 mfrzkl</p>
+    <footer>
+        <p style="margin: 0; font-size: 0.9em; color: #666;">© 2024 mfrzkl. All Rights Reserved.</p>
     </footer>
 
     <script>
         let isTransitioning = false;
+        let currentLang = 'en';
+        
+        const languages = {
+            'en': { next: 'id', label: 'English' },
+            'id': { next: 'jp', label: 'Indonesia' },
+            'jp': { next: 'en', label: 'Japan' }
+        };
 
-        function setLanguage(lang) {
+        function toggleLanguage() {
             if (isTransitioning) return;
+            
+            const nextLang = languages[currentLang].next;
+            const button = document.getElementById('langButton');
+            
+            switchLanguage(nextLang);
+            currentLang = nextLang;
+            button.textContent = languages[currentLang].label;
+        }
+
+        function switchLanguage(lang) {
             isTransitioning = true;
 
             const currentActive = document.querySelector('.content.active');
@@ -130,19 +144,15 @@
                 return;
             }
 
-            // Start fade out
             currentActive.classList.remove('active');
 
-            // Wait for fade out to complete
             setTimeout(() => {
-                // Start fade in
                 nextContent.classList.add('active');
                 
-                // Reset transitioning flag after animation completes
                 setTimeout(() => {
                     isTransitioning = false;
-                }, 700);
-            }, 700);
+                }, 350);
+            }, 350);
         }
     </script>
 </body>
