@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mfrzkl</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mono-social-icons/1.10.8/font/MonoSocialIconsFont.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/spectrum-css/1.8.0/fonts/SpaceMono-Regular.ttf" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'Space Mono';
@@ -16,15 +16,18 @@
             max-width: 600px;
             margin: 40px auto;
             padding: 20px;
-            line-height: 1.4;
+            line-height: 1.6;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            font-size: 14px;
+            font-weight: 300;
+            letter-spacing: 0.2px;
         }
 
         .logo {
-            width: 120px;
-            margin-bottom: 20px;
+            width: 100px;
+            margin-bottom: 25px;
         }
 
         .content {
@@ -55,6 +58,8 @@
             font-family: 'Space Mono', monospace;
             transition: all 0.3s ease;
             min-width: 80px;
+            font-size: 13px;
+            letter-spacing: 0.5px;
         }
 
         button:hover {
@@ -64,46 +69,65 @@
         a {
             color: #000;
             text-decoration: none;
-            border-bottom: 1px solid transparent;
+            border-bottom: 1px solid #000;
             transition: border-bottom-color 0.3s ease;
+            padding-bottom: 1px;
         }
 
         a:hover {
-            border-bottom-color: #000;
+            border-bottom-color: transparent;
         }
 
         p {
-            margin: 8px 0;
+            margin: 0 0 20px 0;
+            font-weight: 300;
         }
 
         ul {
             list-style: none;
             padding: 0;
+            margin-top: 30px;
         }
 
         li {
-            margin: 5px 0;
+            margin: 8px 0;
         }
 
         footer {
-            padding: 10px 0;
-            font-size: 0.9em;
+            padding: 15px 0;
+            font-size: 0.85em;
             color: #666;
             text-align: left;
+            border-top: 1px solid #eee;
+            margin-top: 40px;
         }
 
-        .jp-text {
-            font-family: "Noto Sans JP", sans-serif;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        b {
+            font-weight: 500;
+        }
+
+        em {
+            font-style: normal;
+            background: #f8f8f8;
+            padding: 2px 4px;
+            border-radius: 3px;
         }
     </style>
 </head>
 <body>
-    <div style="margin-bottom: 20px;">
+    <div class="header">
         <svg class="logo" viewBox="0 0 200 60">
             <path d="M20 40c2-15 5-25 15-30 0 0-5 10-5 20s10 15 15 10c5-5 5-15 0-20-5-5-15-5-20 0-5 5-5 15-5 20zM70 40c0-15 5-25 15-30 0 0-5 10-5 20s10 15 15 10c5-5 5-15 0-20-5-5-15-5-20 0-5 5-5 15-5 20zM120 40c0-15 5-25 15-30 0 0-5 10-5 20s10 15 15 10c5-5 5-15 0-20-5-5-15-5-20 0-5 5-5 15-5 20zM160 40c0-15 5-25 15-30 0 0-5 10-5 20s10 15 15 10c5-5 5-15 0-20-5-5-15-5-20 0-5 5-5 15-5 20z" 
                   fill="none" 
                   stroke="black" 
-                  stroke-width="2"
+                  stroke-width="1.5"
                   style="stroke-linecap: round; stroke-linejoin: round;"/>
         </svg>
         <button onclick="toggleLanguage()" id="langButton">English</button>
@@ -135,12 +159,9 @@
         </div>
 
         <div id="content-jp" class="content">
-            <svg class="logo" viewBox="0 0 200 60" style="margin-bottom: 20px;">
-                <text x="50" y="40" font-family="Noto Sans JP" font-size="24" fill="black">日本語</text>
-            </svg>
-            <p class="jp-text"><b>mfrzkl</b> はさまざまな独立およびコラボレーティブプロジェクトに積極的に参加しているソフトウェアエンジニアです。これらには、MERNスタックを使用してフロントエンド開発者として務めた<em>Till Jannah</em>や、PERNスタックで開発された<em>Aluglass</em>などがあります。</p>
-            <p class="jp-text">コラボレーティブプロジェクトに加えて、<b>mfrzkl</b> はJavaで構築されたゲームエンジン<em>Pangoline Engine</em>や、さまざまな店舗に統合可能なセルフサービス決済機など、独自のプロジェクトにも取り組んできました。</p>
-            <p class="jp-text">革新的な技術ソリューションの創造に情熱を持ち、フリーランスの機会、コラボレーション、委託プロジェクトを歓迎しています。</p>
+            <p><b>mfrzkl</b> はさまざまな独立およびコラボレーティブプロジェクトに積極的に参加しているソフトウェアエンジニアです。これらには、MERNスタックを使用してフロントエンド開発者として務めた<em>Till Jannah</em>や、PERNスタックで開発された<em>Aluglass</em>などがあります。</p>
+            <p>コラボレーティブプロジェクトに加えて、<b>mfrzkl</b> はJavaで構築されたゲームエンジン<em>Pangoline Engine</em>や、さまざまな店舗に統合可能なセルフサービス決済機など、独自のプロジェクトにも取り組んできました。</p>
+            <p>革新的な技術ソリューションの創造に情熱を持ち、フリーランスの機会、コラボレーション、委託プロジェクトを歓迎しています。</p>
             <ul>
                 <li><a href="#">ウェブサイト</a></li>
                 <li><a href="#">github</a></li>
